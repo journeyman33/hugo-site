@@ -1,4 +1,4 @@
-baseURL: 
+baseURL: "https://journeyman33.github.io/hugo-site/"
 languageCode: en-us
 title: DevOps 
 theme: "PaperMod"
