@@ -1,0 +1,4 @@
+{{ $image := .Page.Resources.GetMatch (.Get 0) }}
+{{ with $image }}
+  <img src="{{ .RelPermalink }}" width="{{ .Get 1 }}" alt="{{ .Get 2 }}">
+{{ end }}

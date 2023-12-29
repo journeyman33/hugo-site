@@ -4,6 +4,11 @@ date: 2023-11-14T16:12:16+02:00
 draft: false
 tags: ["html","css"]
 categories: ["tech"]
+resources:
+  - src: "/assets/img/k8s-resources/*"
+    name: "k8s-resources"
+    title: "k8s-resources"
+
 ---
 Kubernetes simplifies the running of containerized application by automating many things like scaling, self-healing, high-availability, service discovery, load balancing, updates and rollbacks. This is enabled by a unified API ( Controller Manager, Scheduler, etcd, Kubelet, Kube-proxy ) that allows for applications to be defined declaratively in yaml, handle configuration management, persistent storage and RBAC. When the API is extended, with CRD's (Custom Resource Definitions), Admissions Controllers and 
 with Controllers/Operators, Kubernetes then goes beyond 'an orchestrator of containers' 
@@ -26,8 +31,33 @@ With all these automation features that have made things easy comes complexity. 
 <!--  <img src="/static/img/k8s-resources/pv-128.png" alt="pv" width="100" height="100">
   -->
 
+<!--   ![pv](/static/img/k8s-resources/pv-128.png)  ![pvc](/static/img/k8s-resources/pvc-128.png)]     -->
 
-![pv](/static/img/k8s-resources/pv-128.png)  ![pvc](/static/img/k8s-resources/pvc-128.png)]
+<!-- {{ $image := resources.Get "img/k8s-resources/*.png }}   -->
+
+<!--  {{< img  "/assets/img/k8s-resources/pv-128.png" "50" "PV" >}}
+      {{< img  "/assets/img/k8s-resources/pvc-128.png" "50" "PVC" >}}   -->
+
+![Pod](/static/img/k8s-resources-40/pv-128.png)
+![Pod](/static/img/k8s-resources-40/pvc-128.png)
+![Pod](/static/img/k8s-resources-40/pv-128.png)
+![Pod](/static/img/k8s-resources-40/pv-128.png)
+![Pod](/static/img/k8s-resources-40/pv-128.png)
+![Pod](/static/img/k8s-resources-40/pv-128.png)
+![Pod](/static/img/k8s-resources-40/pv-128.png)
+
+<!--  <img src="/assets/img/k8s-resources/pod-128.png" alt="Pod">    -->
+
+{{ $image := resources.Get "k8s-resources/pv-128.png" }}
+{{ with $image }}
+  {{ $resized := $image.Resize "70x" }}
+  ![pv]( {{ $resized.RelPermalink }} )
+{{ end }}
+
+
+
+
+{{ $pv := .Page.Resources.GetMatch "k8s-resources/" }}
 
 
 <!--  <img src="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/c-role-128.png" alt="cluster role">  -->
