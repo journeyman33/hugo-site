@@ -10,11 +10,12 @@ resources:
     title: "k8s-resources"
 
 ---
-Kubernetes simplifies the running of containerized application by automating many things like scaling, self-healing, high-availability, service discovery, load balancing, updates and rollbacks. This is enabled by a unified API ( Controller Manager, Scheduler, etcd, Kubelet, Kube-proxy ) that allows for applications to be defined declaratively in yaml, handle configuration management, persistent storage and RBAC. When the API is extended, with CRD's (Custom Resource Definitions), Admissions Controllers and 
-with Controllers/Operators, Kubernetes then goes beyond 'an orchestrator of containers' 
+Kubernetes simplifies the running of containerized application by automating many things like scaling, self-healing, high-availability, service discovery, load balancing, updates and rollbacks. This is enabled by a unified API ( Controller Manager, Scheduler, etcd, Kubelet, Kube-proxy ) that allows for applications to be defined declaratively in yaml, handle configuration management, persistent storage and RBAC.
 
-With all these automation features that have made things easy comes complexity. That's  because the underlying is complex. However, once again, the new goal is to abstract away this complexity and try and make things 'simpler'. It is possible, with a wrapper layer, to deploy an application to Kubernetes without having to know the  Kubernetes resources (objects) as shown below. Yet it's probably worth just knowing, especially if you want to appreciate what ever layer that does get put on top,  the <span style="color: green">**underlying kubernetes resources:**</span> 
-#### <span style="color:green;"> -namespace,deploy,pods,rs,service,ingress,hpa,netpol,limits,quotas </span>
+ When the API is extended, with CRDs (Custom Resource Definitions), Admissions Controllers and with Controllers/Operators, Kubernetes then goes beyond ‘an orchestrator of containers’ to provision cloud infrastructure or custom applications through Crossplane created CRDs;  to enforce security policies through a Kyverno Admission Controller; to synchronize the cluster manifests with the source of truth on Github through ArgoCD's CRDs; to provision a service mesh or other side car patterns like Knative or Dapr. 
+
+With all the automation features (on vanilla Kubernetes) that have made things easy comes complexity. That’s because the underlying is complex. However, once again, the new goal, it seems,  is to abstract away this complexity and try and make things ‘simpler’. It is possible, with one CRD wrapper layer (from acorn.io) to create and deploy an application to Kubernetes without having to know the Kubernetes resources (objects), shown below. Yet it’s probably worth just knowing, especially if you want to appreciate what ever layer that does get put on top of the <span style="color: green">**underlying kubernetes resources:**</span> 
+#### <span style="color:green;"> (1) namespace, deployment, pod, replicaset ,service, ingress, horizontal autoscaler, network policy, limits, quotas </span>
 ![k8s Exposed Pod](/static/img/k8s-exposed-pod.png)
 
 <!-- <img src="/home/charles/hugo/third-site/static/img/k8s-exposed-pod.png" alt="Basic K8s cluster resource"> - this does not render either-->
@@ -25,7 +26,7 @@ With all these automation features that have made things easy comes complexity. 
 
 <!--    <img src="/static/img/k8s-exposed-pod.png" alt="K8s Resources">   -->
 
-#### <span style="color:green;">- persistent volume, persistent volume claim </span>
+#### <span style="color:green;"> (2) persistent volume, persistent volume claim, config map, secret, endpoint, service account, role, cluster role, cluster role binding and pod security policy </span>
 <!--  ![pv](/static/img/k8s-resources/pv-128.png)  -->
 
 <!--  <img src="/static/img/k8s-resources/pv-128.png" alt="pv" width="100" height="100">
@@ -40,25 +41,33 @@ With all these automation features that have made things easy comes complexity. 
 
 ![Pod](/static/img/k8s-resources-40/pv-128.png)
 ![Pod](/static/img/k8s-resources-40/pvc-128.png)
-![Pod](/static/img/k8s-resources-40/pv-128.png)
-![Pod](/static/img/k8s-resources-40/pv-128.png)
-![Pod](/static/img/k8s-resources-40/pv-128.png)
-![Pod](/static/img/k8s-resources-40/pv-128.png)
-![Pod](/static/img/k8s-resources-40/pv-128.png)
-
+![Pod](/static/img/k8s-resources-40/cm-128.png)
+![Pod](/static/img/k8s-resources-40/secret-128.png)
+![Pod](/static/img/k8s-resources-40/ep-128.png)
+![Pod](/static/img/k8s-resources-40/sa-128.png)
+![Pod](/static/img/k8s-resources-40/role-128.png)
+![Pod](/static/img/k8s-resources-40/c-role-128.png)
+![Pod](/static/img/k8s-resources-40/crb-128.png)
+![Pod](/static/img/k8s-resources-40/psp-128.png)
 <!--  <img src="/assets/img/k8s-resources/pod-128.png" alt="Pod">    -->
 
+<!-- Resizing; page resource method 1 -->
+
+<!--
 {{ $image := resources.Get "k8s-resources/pv-128.png" }}
 {{ with $image }}
   {{ $resized := $image.Resize "70x" }}
   ![pv]( {{ $resized.RelPermalink }} )
 {{ end }}
+-->
 
 
-
-
-{{ $pv := .Page.Resources.GetMatch "k8s-resources/" }}
-
+<!-- Resizig page resourde method 2 -->
+<!--  
+{{ $pv := .Page.Resources.GetMatch "k8s-resources/pv-128.png" }}
+{{ $pv := $pv.Resize "77x" }}
+<img src="{{ $pv.RelPermalink }}" width="{{ $pv.Width }}" height="{{ $pv.Height }}">
+-->
 
 <!--  <img src="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/c-role-128.png" alt="cluster role">  -->
  
