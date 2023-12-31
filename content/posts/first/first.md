@@ -14,19 +14,15 @@ Kubernetes simplifies the running of containerized application by automating man
 
  When the API is extended, with CRDs (Custom Resource Definitions), Admissions Controllers and with Controllers/Operators, Kubernetes then goes beyond an 'orchestrator of containers':
 
-    to provision cloud infrastructure or custom applications through Crossplane created CRDs,
+- to provision cloud infrastructure or custom applications through Crossplane created CRDs,
+- to enforce security policies through a Kyverno Admission Controller,
+- to synchronize the cluster manifests with the source of truth on Github through ArgoCD's CRDs,
+- to provision an Istio service mesh or other side car patterns like Knative or Dapr,
+- to enable an environment of application-specific-controllers, or operators, to  manage applications:
 
-    to enforce security policies through a Kyverno Admission Controller,
-
-    to synchronize the cluster manifests with the source of truth on Github through ArgoCD's CRDs,
-
-    to provision an Istio service mesh or other side car patterns like Knative or Dapr,
-
-    to enable an environment of application-specific-controllers, or operators, to  manage applications:
-
-       - with the Operator Framework or Red Hat's Openshift.
-       - with Charmed Operators on Ubuntu.
-       - with VMware's Tanzu for Kubernetes Operators.  
+    - with the Operator Framework or Red Hat's Openshift.
+    - with Charmed Operators on Ubuntu.
+    - with VMware's Tanzu.  
 
 
 
