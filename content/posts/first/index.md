@@ -50,9 +50,11 @@ With all the automation features (on vanilla Kubernetes) that have made things e
 
 <!--  {{< img  "/assets/img/k8s-resources/pv-128.png" "50" "PV" >}}
       {{< img  "/assets/img/k8s-resources/pvc-128.png" "50" "PVC" >}}   -->
-![pv]({{ .Resources.Get "pv-128.png" | relURL }})
 
+<!-- page resource loaded!  why not render?-->      
+![pv]({{ .Resources.Get "pv-128.png"| relURL }})
 
+![pv](pv.128.png)
 
 
 ![pv](/static/img/k8s-resources-40/pv-128.png)
@@ -70,9 +72,8 @@ With all the automation features (on vanilla Kubernetes) that have made things e
 <!-- Resizing; page resource method 1 -->
 
 <!--
-{{ $image := resources.Get "k8s-resources/pv-128.png" }}
-{{ with $image }}
-  {{ $resized := $image.Resize "70x" }}
+{{ $image := resources.Get "k8s-resources/pv-128.png"  }}
+  {{ $resized := $imayge.Resize "70x" }}
   ![pv]( {{ $resized.RelPermalink }} )
 {{ end }}
 -->
