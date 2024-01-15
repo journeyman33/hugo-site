@@ -8,7 +8,6 @@ resources:
   - src: "/assets/img/k8s-resources/*"
     name: "k8s-resources"
     title: "k8s-resources"
-
 ---
 Kubernetes simplifies the running of containerized application by automating many things like scaling, self-healing, high-availability, service discovery, load balancing, updates and rollbacks. This is enabled by a unified API ( Controller Manager, Scheduler, etcd, Kubelet, Kube-proxy ) that allows for applications to be defined declaratively in yaml, handle configuration management, persistent storage and RBAC.
 
@@ -28,6 +27,9 @@ Kubernetes simplifies the running of containerized application by automating man
 
 With all the automation features (on vanilla Kubernetes) that have made things easy comes complexity. That’s because the underlying is complex. However, once again, the new goal, it seems,  is to abstract away this complexity and try and make things ‘simpler’. It is possible, with one CRD wrapper layer (from acorn.io) to create and deploy an application to Kubernetes without having to know the Kubernetes resources (objects), shown below. Yet it’s probably worth just knowing, especially if you want to appreciate what ever layer that does get put on top of the <span style="color: green">**underlying kubernetes resources:**</span> 
 #### <span style="color:green;"> (1) namespace, deployment, pod, replicaset ,service, ingress, horizontal autoscaler, network policy, limits, quotas </span>
+
+# {{ .Title }}
+
 ![k8s Exposed Pod](/static/img/k8s-exposed-pod.png)
 
 <!-- <img src="/home/charles/hugo/third-site/static/img/k8s-exposed-pod.png" alt="Basic K8s cluster resource"> - this does not render either-->
@@ -54,7 +56,7 @@ With all the automation features (on vanilla Kubernetes) that have made things e
 <!-- page resource loaded!  why not render?-->      
 ![pv]({{ .Resources.Get "pv-128.png"| relURL }})
 
-![pv](pv.128.png)
+![pv](/pv-128.png)
 
 
 ![pv](/static/img/k8s-resources-40/pv-128.png)
