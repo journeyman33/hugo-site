@@ -55,22 +55,47 @@ With all the automation features (on vanilla Kubernetes) that have made things e
       {{< img  "/assets/img/k8s-resources/pvc-128.png" "50" "PVC" >}}   -->
 
 <!-- page resource loaded!  why not render?-->      
-![pv]({{ .Resources.Get "pv-128.png"| relURL }})
+<!-- ![pv]({{ .Resources.Get "pv-128.png"| relURL }}) -->
 
-![pv](/pv-128.png)
+<!-- ![pv](k8s-resources-40/pv-128.png)
+![pvc](k8s-resources-40/pvc-128.png)
+![cm](k8s-resources-40/cm-128.png)
+![secret](k8s-resources-40/secret-128.png)
+![ep](k8s-resources-40/ep-128.png)
+![sa](k8s-resources-40/sa-128.png)
+![role](k8s-resources-40/role-128.png)
+![c-role](k8s-resources-40/c-role-128.png)
+![crb](k8s-resources-40/crb-128.png)
+![psp](k8s-resources-40/psp-128.png) -->
+
+{{< rawhtml >}}
+<div style="display: flex; 20px;">
+{{< figure src="k8s-resources-40/pv-128.png" alt="pv" >}}{{< figure src="k8s-resources-40/pvc-128.png" alt="pvc" >}}
+</div>
+{{< /rawhtml >}}
+
+![cm](k8s-resources-40/cm-128.png)
+![secret](k8s-resources-40/secret-128.png)
+![ep](k8s-resources-40/ep-128.png)
+![sa](k8s-resources-40/sa-128.png)
+![role](k8s-resources-40/role-128.png)
+![c-role](k8s-resources-40/c-role-128.png)
+![crb](k8s-resources-40/crb-128.png)
+![psp](k8s-resources-40/psp-128.png)
 
 
-![pv](/static/img/k8s-resources-40/pv-128.png)
-![pvc](/static/img/k8s-resources-40/pvc-128.png)
-![cm](/static/img/k8s-resources-40/cm-128.png)
-![secret](/static/img/k8s-resources-40/secret-128.png)
-![ep](/static/img/k8s-resources-40/ep-128.png)
-![sa](/static/img/k8s-resources-40/sa-128.png)
-![role](/static/img/k8s-resources-40/role-128.png)
-![c-role](/static/img/k8s-resources-40/c-role-128.png)
-![crb](/static/img/k8s-resources-40/crb-128.png)
-![psp](/static/img/k8s-resources-40/psp-128.png)
 <!--  <img src="/assets/img/k8s-resources/pod-128.png" alt="Pod">    -->
+![pv](k8s-resources-40/pv-128.png)
+![pvc](k8s-resources-40/pvc-128.png)
+![cm](k8s-resources-40/cm-128.png)
+![secret](k8s-resources-40/secret-128.png)
+![ep](k8s-resources-40/ep-128.png)
+![sa](k8s-resources-40/sa-128.png)
+![role](k8s-resources-40/role-128.png)
+![c-role](k8s-resources-40/c-role-128.png)
+![crb](k8s-resources-40/crb-128.png)
+![psp](k8s-resources-40/psp-128.png)
+
 
 <!-- Resizing; page resource method 1 -->
 

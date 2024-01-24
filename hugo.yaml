@@ -3,9 +3,9 @@ languageCode: en-us
 title: DevOps
 theme: "PaperMod"
 markup:
-  defaultMarkdownHandler: "goldmark"
-  highlight:
-    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
 params:
   author: Charles Vosloo
   homeInfoParams:
