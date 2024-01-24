@@ -19,7 +19,6 @@ params:
     - name: linkdn
       url: "https://linkdn.com/"
   ShowBreadCrumbs: true
-  ShowReadingTime: true
   ShowSharedButtons: true
   ShowPostNavLinks: true
 
