@@ -1,16 +1,16 @@
 baseURL: "https://journeyman33.github.io/hugo-site/"
 languageCode: en-us
-title: DevOps 
+title: DevOps
 theme: "PaperMod"
 markup:
-  defaultMarkdownHandler: goldmark
+  defaultMarkdownHandler: "goldmark"
   highlight:
     noClasses: false
 params:
   author: Charles Vosloo
   homeInfoParams:
-    Title: 'Hello'
-    Content: 'Welcome to my blog. I share content on kubernetes and DevOps'
+    Title: "Hello"
+    Content: "Welcome to my blog. I share content on kubernetes and DevOps"
   socialIcons:
     - name: facebook
       url: "https://facebook.com/"
@@ -23,18 +23,21 @@ params:
   ShowSharedButtons: true
   ShowPostNavLinks: true
 
-
-menu: 
-    main:
-      - identifier: categories
-        name: Categories
-        url: /categories/
-        weight: 10
-      - identifier: tags
-        name: Tags
-        url: /tags/
-        weight: 20
-      - identifier: archives
-        name: Archives
-        url: /archives/
-        weight: 30
+menu:
+  main:
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: Archives
+      url: /archives/
+      weight: 30
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 5
