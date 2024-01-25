@@ -33,88 +33,24 @@ With all the automation features (on vanilla Kubernetes) that have made things e
 
 ![k8s Exposed Pod](images/k8s-diagram.png)
 
-<!-- <img src="/home/charles/hugo/third-site/static/img/k8s-exposed-pod.png" alt="Basic K8s cluster resource"> - this does not render either-->
-
-<!--  <img src="https://github.com/kubernetes/community/blob/master/icons/docs/k8s-exposed-pod.png?raw=true" alt="K8s Resources">   -->
-
-<!--   <img src="home/charles/hugo/third-site/static/img/k8s-exposed-pod.png" alt="K8s Resources">  -->
-
-<!--    <img src="/static/img/k8s-exposed-pod.png" alt="K8s Resources">   -->
-
 #### <span style="color:green;"> (2) persistent volume, persistent volume claim, config map, secret, endpoint, service account, role, cluster role, cluster role binding and pod security policy </span>
-<!--  ![pv](/static/img/k8s-resources/pv-128.png)  -->
-
-<!--  <img src="/static/img/k8s-resources/pv-128.png" alt="pv" width="100" height="100">
-  -->
-
-<!--   ![pv](/static/img/k8s-resources/pv-128.png)  ![pvc](/static/img/k8s-resources/pvc-128.png)]     -->
-
-<!-- {{ $image := resources.Get "img/k8s-resources/*.png }}   -->
-
-<!--  {{< img  "/assets/img/k8s-resources/pv-128.png" "50" "PV" >}}
-      {{< img  "/assets/img/k8s-resources/pvc-128.png" "50" "PVC" >}}   -->
-
-<!-- page resource loaded!  why not render?-->      
-<!-- ![pv]({{ .Resources.Get "pv-128.png"| relURL }}) -->
-
-<!-- ![pv](k8s-resources-40/pv-128.png)
-![pvc](k8s-resources-40/pvc-128.png)
-![cm](k8s-resources-40/cm-128.png)
-![secret](k8s-resources-40/secret-128.png)
-![ep](k8s-resources-40/ep-128.png)
-![sa](k8s-resources-40/sa-128.png)
-![role](k8s-resources-40/role-128.png)
-![c-role](k8s-resources-40/c-role-128.png)
-![crb](k8s-resources-40/crb-128.png)
-![psp](k8s-resources-40/psp-128.png) -->
 
 {{< rawhtml >}}
-<div style="display: flex; 20px;">
-{{< figure src="k8s-resources-40/pv-128.png" alt="pv" >}}{{< figure src="k8s-resources-40/pvc-128.png" alt="pvc" >}}
+<div style="display: flex; 40px;">
+{{< figure src="k8s-resources-40/pv-128.png" alt="pv" >}}
+{{< figure src="k8s-resources-40/pvc-128.png" alt="pvc" >}}
+{{< figure src="k8s-resources-40/cm-128.png" alt="cm" >}}
+{{< figure src="k8s-resources-40/secret-128.png" alt="secret" >}}
+{{< figure src="k8s-resources-40/ep-128.png" alt="ep" >}}
+{{< figure src="k8s-resources-40/sa-128.png" alt="sa" >}}
+{{< figure src="k8s-resources-40/role-128.png" alt="role" >}}
+{{< figure src="k8s-resources-40/c-role-128.png" alt="c-role" >}}
+{{< figure src="k8s-resources-40/crb-128.png" alt="crb" >}}
+{{< figure src="k8s-resources-40/psp-128.png" alt="psp" >}}
 </div>
 {{< /rawhtml >}}
 
-![cm](k8s-resources-40/cm-128.png)
-![secret](k8s-resources-40/secret-128.png)
-![ep](k8s-resources-40/ep-128.png)
-![sa](k8s-resources-40/sa-128.png)
-![role](k8s-resources-40/role-128.png)
-![c-role](k8s-resources-40/c-role-128.png)
-![crb](k8s-resources-40/crb-128.png)
-![psp](k8s-resources-40/psp-128.png)
 
-
-<!--  <img src="/assets/img/k8s-resources/pod-128.png" alt="Pod">    -->
-![pv](k8s-resources-40/pv-128.png)
-![pvc](k8s-resources-40/pvc-128.png)
-![cm](k8s-resources-40/cm-128.png)
-![secret](k8s-resources-40/secret-128.png)
-![ep](k8s-resources-40/ep-128.png)
-![sa](k8s-resources-40/sa-128.png)
-![role](k8s-resources-40/role-128.png)
-![c-role](k8s-resources-40/c-role-128.png)
-![crb](k8s-resources-40/crb-128.png)
-![psp](k8s-resources-40/psp-128.png)
-
-
-<!-- Resizing; page resource method 1 -->
-
-<!--
-{{ $image := resources.Get "k8s-resources/pv-128.png"  }}
-  {{ $resized := $imayge.Resize "70x" }}
-  ![pv]( {{ $resized.RelPermalink }} )
-{{ end }}
--->
-
-
-<!-- Resizig page resourde method 2 -->
-<!--  
-{{ $pv := .Page.Resources.GetMatch "k8s-resources/pv-128.png" }}
-{{ $pv := $pv.Resize "77x" }}
-<img src="{{ $pv.RelPermalink }}" width="{{ $pv.Width }}" height="{{ $pv.Height }}">
--->
-
-<!--  <img src="https://github.com/kubernetes/community/blob/master/icons/png/resources/labeled/c-role-128.png" alt="cluster role">  -->
  
 There are many ways to deploy applications to Kubernetes.  What is the optimal way? In the following posts I am going to explore the following methods:
 1. **Kubectl**
