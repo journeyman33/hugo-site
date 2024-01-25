@@ -1,6 +1,6 @@
 ---
 title: How to Deploy Applications to Kubernetes
-date: 2023-11-14T16:12:16+02:00
+date: 2024-01-14
 draft: false
 tags: ["html","css"]
 categories: ["tech"]
