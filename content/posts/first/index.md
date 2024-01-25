@@ -12,9 +12,9 @@ weight: 5
 ---
 
 
-Kubernetes simplifies the running of containerized application by automating many things like scaling, self-healing, high-availability, service discovery, load balancing, updates and rollbacks. This is enabled by a unified API ( Controller Manager, Scheduler, etcd, Kubelet, Kube-proxy ) that allows for applications to be defined declaratively in yaml, handle configuration management, persistent storage and RBAC.
+Kubernetes simplifies the running of containerized application by automating many things like scaling, self-healing, high-availability, service discovery, load balancing, updates and rollbacks. This is enabled by a unified API which includes the Controller Manager, Scheduler, etcd, Kubelet and  Kube-proxy that allows for applications to be defined declaratively in yaml and do things like configuration management, handle persistent storage and Role Based Access Control.
 
- When the API is extended, with CRDs (Custom Resource Definitions), Admissions Controllers and with Controllers/Operators, Kubernetes then goes beyond an 'orchestrator of containers':
+ When the API is extended, with CRDs (Custom Resource Definitions), Admissions Controllers and with Controllers/Operators, Kubernetes then goes beyond its original purpose as an 'orchestrator of containers':
 
 - to provision cloud infrastructure or custom applications through Crossplane created CRDs,
 - to enforce security policies through a Kyverno Admission Controller,
@@ -28,8 +28,8 @@ Kubernetes simplifies the running of containerized application by automating man
 
 
 
-With all the automation features (on vanilla Kubernetes) that have made things easy comes complexity. That’s because the underlying is complex. However, once again, the new goal, it seems,  is to abstract away this complexity and try and make things ‘simpler’. It is possible, with one CRD wrapper layer (from acorn.io) to create and deploy an application to Kubernetes without having to know the Kubernetes resources (objects), shown below. Yet it’s probably worth just knowing, especially if you want to appreciate what ever layer that does get put on top of the <span style="color: green">**underlying kubernetes resources:**</span> 
-#### <span style="color:green;"> (1) namespace, deployment, pod, replicaset ,service, ingress, horizontal autoscaler, network policy, limits, quotas </
+With all the automation features (on vanilla Kubernetes) that have made things easy comes complexity. That’s because the underlying is complex. However, once again, the new goal, it seems,  is to abstract away this complexity and try and make things ‘simpler’. It is possible, with one CRD wrapper layer (from acorn.io) to create and deploy an application to Kubernetes without having to know the Kubernetes resources (objects), shown below. Yet it’s probably worth knowing, especially if you want to appreciate what ever layer that does get put on top of the <span style="color: green">**underlying kubernetes resources :**</span> 
+#### <span style="color:green;"> (1) namespace, deployment, pod, replicaset ,service, ingress, horizontal autoscaler, network policy, limits, quotas 
 
 ![k8s Exposed Pod](images/k8s-diagram.png)
 
