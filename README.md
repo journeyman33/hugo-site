@@ -6,6 +6,7 @@ _A fast, minimalist blog powered by Hugo and deployed automatically via GitHub P
 [![Build & Deploy](https://img.shields.io/github/actions/workflow/status/journeyman33/hugo-site/gh-pages.yml?label=Deploy%20Status&logo=github)](https://github.com/journeyman33/hugo-site/actions)
 
 ---
+**🌐 Live Site:** [https://journeyman33.github.io/hugo-site/](https://journeyman33.github.io/hugo-site/)
 
 This repository contains the source for my personal website and blog.  
 It serves as a platform for documenting my projects, sharing lessons learned, and reflecting on my journey in DevOps, cloud engineering, and automation.
