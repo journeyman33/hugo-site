@@ -23,7 +23,7 @@ flowchart LR
     C --> D[Live Production Site]
 
     B -. triggered by push .-> E[GitHub Actions]
-
+```
 ## ⚙️ Build & Deployment Overview
 
 - **Hugo** compiles Markdown content into a lightweight static website.  
