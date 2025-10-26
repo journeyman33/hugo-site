@@ -82,7 +82,7 @@ cd hugo-site
 # Run the local dev server
 hugo server -D
 Then open: **[http://localhost:1313](http://localhost:1313)**
-
+```
 ---
 
 ## 🧭 Future Plans
